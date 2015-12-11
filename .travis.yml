@@ -9,6 +9,7 @@ addons:
     - rubber
     - texlive-science
     - texlive-pictures
+    - texlive-latex-extra
 
 script:
  # Remove [![ tags
