@@ -1,7 +1,6 @@
 # Gender and Race in the Physical Sciences
 Documents for the College of William &amp; Mary's special topics course in the physics department (Physics 481)
 
-# Current pdf output (master document)
 [![Build Status](https://travis-ci.org/wdconinc/gender_and_race_in_the_physical_sciences.svg?branch=master)](https://travis-ci.org/wdconinc/gender_and_race_in_the_physical_sciences) 
 [![GitHub Release](https://img.shields.io/badge/download-latest-brightgreen.svg)](https://github.com/wdconinc/gender_and_race_in_the_physical_sciences/releases/latest) 
 [![GitHub forks](https://img.shields.io/github/forks/wdconinc/gender_and_race_in_the_physical_sciences.svg)](https://github.com/wdconinc/gender_and_race_in_the_physical_sciences/network) 
