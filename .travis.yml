@@ -28,7 +28,7 @@ deploy:
   file:
    - README.pdf
    - LICENSE.pdf
-   - master.tex
+   - master.pdf
   skip_cleanup: true
   on:
     repo: wdconinc/gender_and_race_in_the_physical_sciences
