@@ -1,0 +1,26 @@
+os: linux
+sudo: required
+
+language: r
+
+apt_packages:
+ - pandoc
+ - pdf2djvu
+ - texlive-science
+ - texlive-pictures
+
+script:
+ - pandoc -s --from=markdown_github --to=latex -V geometry:letter,margin=1in -o README.tex README.md
+ - pdflatex -interaction=nonstopmode README.tex
+ - pandoc -s --from=markdown_github --to=latex -V geometry:letter,margin=1in -o LICENSE.tex LICENSE.md
+ - pdflatex -interaction=nonstopmode LICENSE.tex
+
+deploy:
+  provider: releases
+  api_key:
+    secure: QQP4eLTwBNfXmiWBKjQDd0COHL/bFFJ5RlHmD+KblLS7c6+jCqErx+s2bWfvl9e7gxj0wzz1IGkEqAArXBy5ZSf0o6Ceq198bD6cN9TEdbsCUzY89pSooa6G0zAL+UKlAY0mqz9Kzf+6iwiIa6FcYNX0H8EB3LPsqwKO7JxuD/Cx/qolBruEyoqo1fIELnHgsyKEYvKvpT1oCbEutMg6Qk1qYuCGdbR5faKe3tOmfWkFCbtZnU5il2cSUiaE2/Qe865po0vDNw+gTsvldTAyy8+EzZKzvQaRYSuL5Wik2zcHovxFD3nCH/fSEOo7LWabJDB/XgDGe2O/kFzdBQEGDHh/uVhm5QxaUM/K/zM0S08G7GKdhKuvfB3AaqwpasDScESB+DzPahPcAk19BqKudK/f0Gy6Q4VM9m/kFwM3FL23Qi7vbtF74sKBuxdk3yfan/r32ArJuUVccim1cD8xMo3xhM0wdj1OONgmteFf8H3ER7WgC76RBTy5lrdXUXlSa6jwPIhsDTTHqK2EUqzI1y32HpXImR4gLkvvWHCcyDpaI0mVIk7gsDG1vFJXiMfs8q3xEhOshS6SJ8v2P84OJRU3mm2aJgHmvVUZZ31tzZrHkAdkjgfrgJJnx7K5+aqGwriHaGqDlGKiZLPfmX4eiapqczkFYvhHi+FvqbmTeyY=
+  file:
+   - README.pdf
+  skip_cleanup: true
+  on:
+    repo: wdconinc/gender_and_race_in_the_physical_sciences
