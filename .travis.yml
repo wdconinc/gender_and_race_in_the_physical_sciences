@@ -2,11 +2,13 @@ os: linux
 sudo: required
 language: ruby
 
-apt_packages:
- - pandoc
- - pdf2djvu
- - texlive-science
- - texlive-pictures
+addons:
+  apt:
+   packages:
+    - pandoc
+    - pdf2djvu
+    - texlive-science
+    - texlive-pictures
 
 script:
  - pandoc -s --from=markdown_github --to=latex -V geometry:letter,margin=1in -o README.tex README.md
