@@ -5,16 +5,7 @@ language: ruby
 before_install:
  - sudo apt-add-repository -y ppa:texlive-backports/ppa
  - sudo apt-get update -q
- - sudo apt-get install -y texlive-latex-extra
-
-addons:
-  apt:
-   packages:
-    - pandoc
-    - rubber
-    - texlive-science
-    - texlive-pictures
-    - texlive-latex-extra
+ - sudo apt-get install -y pandoc rubber texlive-science texlive-pictures texlive-latex-extra
 
 script:
  # Remove [![ tags
