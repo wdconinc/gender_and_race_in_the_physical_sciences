@@ -4,6 +4,8 @@ language: ruby
 
 addons:
   apt:
+   sources:
+    - precise
    packages:
     - pandoc
     - pdf2djvu
