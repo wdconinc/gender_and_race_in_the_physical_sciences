@@ -1,8 +1,6 @@
 os: linux
 sudo: required
 
-language: r
-
 apt_packages:
  - pandoc
  - pdf2djvu
