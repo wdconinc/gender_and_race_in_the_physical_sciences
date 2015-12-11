@@ -2,6 +2,11 @@ os: linux
 sudo: required
 language: ruby
 
+before_install:
+ - sudo apt-add-repository -y ppa:texlive-backports/ppa
+ - sudo apt-get update -q
+ - sudo apt-get install -y texlive-latex-extra
+
 addons:
   apt:
    packages:
