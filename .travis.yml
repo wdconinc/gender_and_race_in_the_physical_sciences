@@ -4,18 +4,16 @@ language: ruby
 
 addons:
   apt:
-   sources:
-    - precise
    packages:
     - pandoc
-    - pdf2djvu
     - texlive-science
     - texlive-pictures
 
 script:
- - pandoc -s --from=markdown_github --to=latex -V geometry:letter,margin=1in -o README.tex README.md
+ - pandoc -s --from=markdown --to=latex -V geometry:letter,margin=1in -o README.tex README.md
  - pdflatex -interaction=nonstopmode README.tex
- - pandoc -s --from=markdown_github --to=latex -V geometry:letter,margin=1in -o LICENSE.tex LICENSE.md
+
+ - pandoc -s --from=markdown --to=latex -V geometry:letter,margin=1in -o LICENSE.tex LICENSE.md
  - pdflatex -interaction=nonstopmode LICENSE.tex
 
 deploy:
