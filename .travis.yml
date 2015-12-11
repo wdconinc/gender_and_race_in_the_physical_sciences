@@ -1,5 +1,6 @@
 os: linux
 sudo: required
+language: ruby
 
 apt_packages:
  - pandoc
